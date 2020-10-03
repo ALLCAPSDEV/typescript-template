@@ -1,0 +1,39 @@
+{
+  "name": "typescript-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "run-s test:*",
+    "test:dependencies": "dependency-check . --no-dev --no-peer",
+    "test:lint": "eslint 'src/**/*.ts'",
+    "test:unit": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ALLCAPSDEV/typescript-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ALLCAPSDEV/typescript-template/issues"
+  },
+  "homepage": "https://github.com/ALLCAPSDEV/typescript-template#readme",
+  "devDependencies": {
+    "@swc-node/jest": "1.0.0",
+    "@types/jest": "26.0.14",
+    "@types/node": "14.11.2",
+    "@typescript-eslint/eslint-plugin": "4.3.0",
+    "@typescript-eslint/parser": "4.3.0",
+    "dependency-check": "4.1.0",
+    "eslint": "7.10.0",
+    "eslint-config-prettier": "6.12.0",
+    "eslint-plugin-jest": "24.0.2",
+    "eslint-plugin-prettier": "3.1.4",
+    "jest": "26.4.2",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.1.2",
+    "typescript": "4.0.3"
+  }
+}
