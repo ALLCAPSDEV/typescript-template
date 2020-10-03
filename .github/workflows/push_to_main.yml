@@ -1,0 +1,30 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  coverage:
+    name: Code Coverage to CodeClimate
+    runs-on: ubuntu-latest
+    steps:
+      - actions/checkout@v2
+      - name: npm cache
+        id: npm-cache
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Install Deps if no cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        run: npm ci
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - uses: paambaati/codeclimate-action@v2
+        name: Code Climate coverage action
+        env:
+          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+        with:
+          coverageCommand: npm run test:unit
