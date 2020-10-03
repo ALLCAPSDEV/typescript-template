@@ -10,7 +10,6 @@
     "pretty-quick": "pretty-quick",
     "release": "standard-version",
     "test": "run-s test:*",
-    "test:dependencies": "dependency-check . --no-dev --no-peer",
     "test:lint": "eslint 'src/**/*.ts'",
     "test:unit": "jest",
     "typedoc": "typedoc --out docs ./src"
@@ -37,7 +36,6 @@
     "@typescript-eslint/parser": "4.3.0",
     "commitizen": "4.2.1",
     "cz-conventional-changelog": "3.3.0",
-    "dependency-check": "4.1.0",
     "eslint": "7.10.0",
     "eslint-config-prettier": "6.12.0",
     "eslint-plugin-jest": "24.0.2",
