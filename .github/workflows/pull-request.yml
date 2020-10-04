@@ -17,9 +17,6 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Install Deps if no cache
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm ci
       - name: Use Node.js version ${{ matrix.node_version }}
         uses: actions/setup-node@v2.1.2
         with:
