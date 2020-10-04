@@ -19,7 +19,7 @@ jobs:
       - name: Install Deps if no cache
         if: steps.npm-cache.outputs.cache-hit != 'true'
         run: npm ci
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2.1.2
         with:
           node-version: 14
       - uses: paambaati/codeclimate-action@v2.7.4
