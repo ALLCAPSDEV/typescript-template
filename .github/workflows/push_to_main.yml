@@ -16,10 +16,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: Install Deps if no cache
-        if: steps.npm-cache.outputs.cache-hit != 'true'
-        run: npm ci
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2.1.2
         with:
           node-version: 14
       - uses: paambaati/codeclimate-action@v2.7.4
@@ -27,4 +24,4 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: npm run test:unit
+          coverageCommand: npm cit
