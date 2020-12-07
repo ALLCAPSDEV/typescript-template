@@ -1,4 +1,4 @@
-![TYPESCRIPT TEMPLATE](./.github/assets/ts-template.svg)
+![TYPESCRIPT TEMPLATE](./.github/assets/readme-logo.svg)
 
 ---
 
