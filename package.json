@@ -32,7 +32,7 @@
     "@swc-node/jest": "1.2.1",
     "@types/jest": "26.0.22",
     "@types/node": "15.6.1",
-    "@typescript-eslint/eslint-plugin": "4.21.0",
+    "@typescript-eslint/eslint-plugin": "4.26.1",
     "@typescript-eslint/parser": "4.25.0",
     "commitizen": "4.2.3",
     "cz-conventional-changelog": "3.3.0",
